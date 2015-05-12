@@ -1,6 +1,16 @@
 
 
 function frameYourPhrase(phrase) {
+
+  var words = phrase.split(" "); 
+  var firstWord = words[0].length;
+  var secondWord = words[1].length;
+  var maximum = Math.max(firstWord,secondWord);
+  var astrice = "*".repeat(maximum+4);
+  
+  return astrice;
+}
+ console.log(frameYourPhrase("Hello World!")); 
    /*
      TODO: Write a function that takes a string like "Hello World!" and
      returns the string as a framed phrase like:
@@ -12,6 +22,7 @@ function frameYourPhrase(phrase) {
      Pay attention to the spacing.  The box should be a square.  In other words,
      the longest word in the phrase will dictate the size of the box.
    */  
+
    return "**********\n* Hello  *\n* World! *\n**********";
 }
 
